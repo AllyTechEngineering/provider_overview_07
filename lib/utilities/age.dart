@@ -24,6 +24,13 @@ class Age extends StatelessWidget {
           style: TextStyle(fontSize: 20.0),
         ),
         SizedBox(
+          height: 10.0,
+        ),
+        Text(
+          '- ${context.watch<String>()}',
+          style: TextStyle(fontSize: 20.0),
+        ),
+        SizedBox(
           height: 20.0,
         ),
         ElevatedButton(

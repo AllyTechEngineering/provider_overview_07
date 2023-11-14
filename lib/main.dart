@@ -31,6 +31,14 @@ class _MyAppState extends State<MyApp> {
             return babies.getBabies();
           },
         ),
+        StreamProvider<String>(
+          initialData: 'Bark 0 times',
+          create: (context) {
+            final int dogAge = context.read<Dog>().age;
+            final babies = Babies(age: dogAge * 2);
+            return babies.bark();
+          },
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
